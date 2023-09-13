@@ -1,7 +1,7 @@
 {
     "required_api_version": "^2.0.0",
     "name": "Teste",
-    "description": "Generating UUID easily everywhere without internet connection",
+    "description": "Teste de extension",
     "developer_name": "Zanol",
     "icon": "images/icon.png",
     "options": {

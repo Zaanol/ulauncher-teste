@@ -1,5 +1,4 @@
 import logging
-import uuid
 from ulauncher.api.client.Extension import Extension
 from ulauncher.api.client.EventListener import EventListener
 from ulauncher.api.shared.event import KeywordQueryEvent
@@ -13,10 +12,9 @@ logger = logging.getLogger(__name__)
 class TesteExtension(Extension):
 
     def __init__(self):
-        logger.info('init UUID extension')
+        logger.info('init Teste extension')
         super(TesteExtension, self).__init__()
         self.subscribe(KeywordQueryEvent, KeywordQueryEventListener())
-
 
 class KeywordQueryEventListener(EventListener):
 
