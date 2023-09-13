@@ -24,8 +24,8 @@ class KeywordQueryEventListener(EventListener):
         items = []
 
         items.append(ExtensionResultItem(icon='images/icon.png',
-                                         name="Teste",
-                                         description="Teste 2",
+                                         name="Teste novo",
+                                         description="Teste 3",
                                          highlightable=False,
                                          on_enter=CopyToClipboardAction("Teste 3")
                                          ))
