@@ -1,6 +1,4 @@
 import logging
-import base64
-from datetime import datetime
 from ulauncher.api.client.Extension import Extension
 from ulauncher.api.client.EventListener import EventListener
 from ulauncher.api.shared.event import KeywordQueryEvent
@@ -22,17 +20,11 @@ class KeywordQueryEventListener(EventListener):
     def on_event(self, event, extension):
         items = []
 
-        currentDate = datetime.today().strftime('%Y-%m-%d')
-        currentDateBytes = currentDate.encode("ascii")
-
-        base64Bytes = base64.b64encode(currentDateBytes)
-        base64String = base64Bytes.decode("ascii")
-
         items.append(ExtensionResultItem(icon='images/icon.png',
-                                         name="Tools Key",
-                                         description=base64String,
+                                         name="Teste novo",
+                                         description="Teste 3",
                                          highlightable=False,
-                                         on_enter=CopyToClipboardAction(base64String)
+                                         on_enter=CopyToClipboardAction("Teste 3")
                                          ))
 
         return RenderResultListAction(items)
